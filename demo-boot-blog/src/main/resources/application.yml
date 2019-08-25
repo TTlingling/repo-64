@@ -1,0 +1,49 @@
+spring:
+  mvc:
+    view:
+      prefix: WEB-INF/jsp/
+      suffix: .jsp
+      
+  datasource:
+     url: jdbc:mysql://127.0.0.1:3306/blog
+     username: root
+     password: a
+     driver-class-name: com.mysql.jdbc.Driver
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enable: true
+  
+  resources:
+    staticLocations: 
+     - classpath:/static/
+     - file:/g:/blog/
+
+server:
+  port: 80
+  tomcat:
+    uri-encoding: UTF-8
+     
+ # 邮件服务配置
+#mail:
+     # 邮件服务器地址
+    # host: snmtp.qq.com
+     # 用户名
+    # username: 905801059@qq.com
+     # 发送密码
+     #password: uihazdtdtmwmbfha
+     # 默认字符集编码
+    # default-encoding: UTF-8
+ # 发送地址
+#mail:
+   #fromMail:
+     #addr: 905801059@qq.com
+     
+     
+ # 日志输出
+logging:
+   level:
+     com:
+       yc: trace
+     
